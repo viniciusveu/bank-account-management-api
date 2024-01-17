@@ -1,10 +1,10 @@
 {
     "type": "postgres",
-    "host": "localhost",
+    "host": "postgres_bank",
     "port": 5432,
-    "username": "user",
-    "password": "pwd",
-    "database": "mydb",
+    "username": "user_bank",
+    "password": "pwd_bank",
+    "database": "mydb_bank",
     "entities": [
         "dist/**/*.entity{.ts,.js}"
     ],

@@ -9,9 +9,9 @@ services:
       POSTGRES_PASSWORD: pwd_bank
       POSTGRES_DB: mydb_bank
     ports:
-      - "54321:5432"
+      - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data_bank:/var/lib/postgresql/data
 
   nest_bank:
     build:
@@ -21,7 +21,7 @@ services:
     depends_on:
       - postgres_bank
     environment:
-      DATABASE_URL: postgres://user:pwd@postgres:5432/mydb_bank
+      DATABASE_URL: postgres://user_bank:pwd_bank@postgres_bank:5432/mydb_bank
     ports:
       - "3000:3000"
     volumes:
